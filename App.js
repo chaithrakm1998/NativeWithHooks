@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   Image,
 } from 'react-native';
+import SearchBar from './searchbar/searchbar'
 
 
 const API_ENDPOINT = 'https://randomuser.me/api/?seed=1&page=1&results=20';
@@ -58,6 +59,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}> CONTACTS</Text>
+
+      <SearchBar />
+
       <FlatList
         data={data}
         keyExtractor={item => item.first}
@@ -99,6 +103,7 @@ const styles = StyleSheet.create({
     color: '#101010',
     marginTop: 60,
     fontWeight: '700', 
+    padding: 10,
     
   },
   listItem: {
